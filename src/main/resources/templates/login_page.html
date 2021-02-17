@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<a class="navbar-brand" href="/">LinuxLife</a>
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="">About</a></li>
+			<li class="nav-item"><a class="nav-link" href="/">Donate</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<br>
+	</div>
+	<main role="main" class="container">
+
+		<div class="row">
+			<div class="col-md-8" style="font-size: 1rem;">
+				<div class="card">
+					<div class="card-body">
+						<div class="content-section">
+							<form method="POST">
+								<input type="hidden" name="csrfmiddlewaretoken"
+									value="bn8mSRHdp8JJ6jIPvET06c1oF7VAvRVumKw9LaSxERy7RVzBLJYmPoTHf5pCF7FG">
+								<fieldset class="form-group">
+									<legend class="border-bottom mb-4">Log In</legend>
+
+
+									<div id="div_id_username" class="form-group">
+										<label for="id_username" class=" requiredField">
+											Username<span class="asteriskField">*</span>
+										</label>
+										<div class="">
+											<input type="text" name="username" autofocus
+												autocapitalize="none" autocomplete="username"
+												maxlength="150" class="textinput textInput form-control"
+												required id="id_username">
+										</div>
+									</div>
+									<div id="div_id_password" class="form-group">
+										<label for="id_password" class=" requiredField">
+											Password<span class="asteriskField">*</span>
+										</label>
+										<div class="">
+											<input type="password" name="password"
+												autocomplete="current-password"
+												class="textinput textInput form-control" required
+												id="id_password">
+										</div>
+									</div>
+
+								</fieldset>
+								<div class="form-group">
+									<button class="btn btn-outline-info" type="submit">Login</button>
+								</div>
+							</form>
+							<div class="border-top pt-3">
+								<small class="text-muted"> Need An Account? <a
+									class="ml-2" href="/register/">Sign Up Now</a>
+								<br>Or<br><br>
+								</small>
+								<a href="/oauth2/authorization/google" class="btn  btn-success">
+							<i class=""></i> Login with Google
+						</a> <br> <br> <a href="/oauth2/authorization/github"
+							class="btn  btn-dark"> <i class=""></i> Login with GitHub
+						</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body">
+						<h2>LinuxLife</h2>
+						<ul class="list-group">
+							<li class="list-group-item list-group-item-light">Best
+								Distros</li>
+							<li class="list-group-item list-group-item-light">Best UI/UX</li>
+							<li class="list-group-item list-group-item-light">Ultimate
+								Customization</li>
+							<li class="list-group-item list-group-item-light">Beast
+								Performance from Potato PC</li>
+						</ul>
+						<br>
+						<p>Best viewed from Desktop</p>
+						<a href="https://www.linkedin.com/in/abhinav-mmmut/">Contact
+							the developer</a>
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

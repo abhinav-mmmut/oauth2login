@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<a class="navbar-brand" href="#">LinuxLife</a>
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="">FlauntYourStyle</a></li>
+			<li class="nav-item"><a class="nav-link" href="/donate">Donate</a></li>
+			<li class="nav-item"><a class="nav-link" href="/logout_page">Logout</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<br> <br> <br>
+	</div>
+	<main role="main" class="container">
+		<div class="row">
+			<div class="col-md-8" style="font-size: 1rem;">
+				<div class="card">
+					<div class="card-header">
+						<span th:if="${parameters.STATUS== 'TXN_SUCCESS'}">Donation
+							Succesfull! Thanks for supporting us!</span>
+					</div>
+					<div class="card-body">
+						<ul class="list-group">
+							<li class="list-group-item">Bank transaction ID: <span
+								th:text=${parameters.BANKTXNID}></span></li>
+							<li class="list-group-item">Donation amount: <span
+								th:text=${parameters.TXNAMOUNT}></span></li>
+							<li class="list-group-item">Transaction status: <span
+								th:text=${parameters.STATUS}></span></li>
+							<li class="list-group-item">Transaction date: <span
+								th:text=${parameters.TXNDATE}></span></li>
+						</ul>
+					</div>
+				</div>
+				<br>
+				<div class="card">
+					<div class="card-body"><a href="/">Go to Home</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body">
+						<h2>LinuxLife</h2>
+						<ul class="list-group">
+							<li class="list-group-item list-group-item-light">Best
+								Distros</li>
+							<li class="list-group-item list-group-item-light">Best UI/UX</li>
+							<li class="list-group-item list-group-item-light">Ultimate
+								Customization</li>
+							<li class="list-group-item list-group-item-light">Beast
+								Performance from Potato PC</li>
+						</ul>
+						<br>
+						<p>Best viewed from Desktop</p>
+						<a href="https://www.linkedin.com/in/abhinav-mmmut/">Contact
+							the developer</a>
+						<p></p>
+					</div>
+				</div>
+			</div>
+	</main>
+	</div>
+
+
+</body>
+</html>
